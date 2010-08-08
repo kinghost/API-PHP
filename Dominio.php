@@ -5,7 +5,7 @@ class Dominio extends Kinghost
 	// getDominios() {{{
 	/**
 	* Retorna todos os dominios de sua conta
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
@@ -15,23 +15,23 @@ class Dominio extends Kinghost
 	*
 	* @access public
 	* @return object
-	*/		
-	public function getDominios( $idDominio = null)
+	*/
+	public function getDominios( $idCliente = null)
 	{
-		if( $idDominio === null)
+		if( $idCliente === null)
 		{
 			$this->doCall( 'dominio/' , '' , 'GET');
 		}else{
-			$this->doCall( 'dominio/'.$idDominio , '' , 'GET');
+			$this->doCall( 'dominio/'.$idCliente , '' , 'GET');
 		}
 		return @json_decode($this->getResponseBody() , true);
 	}
 	// }}}
-	
+
 	// getStatusSSH() {{{
 	/**
 	* Chama o metodo que retorna o status do SSH do domino
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
@@ -41,18 +41,18 @@ class Dominio extends Kinghost
 	*
 	* @access public
 	* @return object
-	*/		
+	*/
 	public function getStatusSSH( $idDominio = false)
 	{
-		$this->doCall( 'dominio/ssh/'.$idDominio.'/status/' , '' , 'GET');
+		$this->doCall( 'dominio/ssh/'.$idDominio.'/status/' , '' , 'GET');		
 		return @json_decode($this->getResponseBody() , true);
 	}
-	// }}}	
+	// }}}
 	
 	// getDadosDominio() {{{
 	/**
 	* Retorna os dados de um dominio
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
@@ -62,19 +62,19 @@ class Dominio extends Kinghost
 	*
 	* @access public
 	* @return object
-	*/		
+	*/
 	public function getDadosDominio( $idDominio )
 	{
 		$this->doCall( 'dominio/informacoes/'.$idDominio , '' , 'GET');
 		return @json_decode($this->getResponseBody() , true);
 	}
-	// }}}		
+	// }}}
 	
 	
 	// getEspacoOcupado() {{{
 	/**
 	* Retorna o espaco ocupado por um dominio
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
@@ -84,10 +84,10 @@ class Dominio extends Kinghost
 	*
 	* @access public
 	* @return object
-	*/		
+	*/
 	public function getEspacoOcupado( $idDominio )
 	{
-		$this->doCall( 'dominio/getEspacoOcupado/'.$idDominio , '' , 'GET');
+		$this->doCall( 'dominio/espacoOcupado/'.$idDominio , '' , 'GET');
 		return @json_decode($this->getResponseBody() , true);
 	}
 	// }}}
@@ -95,18 +95,18 @@ class Dominio extends Kinghost
 	// adicionarDominio() {{{
 	/**
 	* Retorna o espaco ocupado por um dominio
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
 	* $dominio = new Dominio('meu@email.com' , '123456');
 	* $param = array(
-	*			    'idCliente' => '1224',
-	*			    'dominio' => 'meudominio.com.br',
-	*			    'senha'	=> '123mudar',
-	*			    'planoId' => '12589',
-	*			    'pagoAte' => date ('Y-m-d')
-	*			    );
+	* 				'idCliente' => '1224',
+	* 				'dominio' => 'meudominio.com.br',
+	* 				'senha' => '123mudar',
+	* 				'planoId' => '12589',
+	* 				'pagoAte' => date ('Y-m-d')
+	* );
 	* print_r($dominio->adicionarDominio($param));
 	* </code>
 	*
@@ -115,36 +115,36 @@ class Dominio extends Kinghost
 	*/
 	public function adicionarDominio( $param )
 	{
-		$this->doCall( 'dominio/adicionardominio/' , $param , 'POST');
+		$this->doCall( 'dominio/' , $param , 'POST');
 		return @json_decode($this->getResponseBody() , true);
 	}
 	// }}}
-
+	
 	// excluirDominio() {{{
 	/**
 	* Retorna o espaco ocupado por um dominio
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
 	* $dominio = new Dominio('meu@email.com' , '123456');
 	* print_r($dominio->excluirDominio($idDominio));
 	* </code>
-	* 
+	*
 	* @access public
 	* @return object
 	*/
 	public function excluirDominio( $idDominio )
 	{
-		$this->doCall( 'dominio/excluirdominio/'.$idDominio , '' , 'DELETE');
+		$this->doCall( 'dominio/'.$idDominio , '' , 'DELETE');
 		return @json_decode($this->getResponseBody() , true);
 	}
 	// }}}
-
+	
 	// editarDominio() {{{
 	/**
 	* Retorna o espaco ocupado por um dominio
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
@@ -157,7 +157,7 @@ class Dominio extends Kinghost
 	*/
 	public function editaDominio( $param )
 	{
-		$this->doCall( 'dominio/editadominio/' , $param , 'PUT');
+		$this->doCall( 'dominio/' , $param , 'PUT');
 		return @json_decode($this->getResponseBody() , true);
 	}
 	// }}}
@@ -165,7 +165,7 @@ class Dominio extends Kinghost
 	// modSecurity() {{{
 	/**
 	* Retorna o espaco ocupado por um dominio
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
@@ -186,7 +186,7 @@ class Dominio extends Kinghost
 	// modRewrite() {{{
 	/**
 	* Retorna o espaco ocupado por um dominio
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
@@ -203,11 +203,11 @@ class Dominio extends Kinghost
 		return @json_decode($this->getResponseBody() , true);
 	}
 	// }}}
-	
+
 	// modDeflate() {{{
 	/**
 	* Retorna o espaco ocupado por um dominio
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
@@ -224,11 +224,11 @@ class Dominio extends Kinghost
 		return @json_decode($this->getResponseBody() , true);
 	}
 	// }}}
-	
+
 	// setStatusSsh() {{{
 	/**
 	* Retorna o espaco ocupado por um dominio
-	* 
+	*
 	* Example:
 	* <code>
 	* require_once 'Dominio.php';
@@ -246,6 +246,6 @@ class Dominio extends Kinghost
 		$this->doCall( 'dominio/ssh/'.$idDominio.'/'.$status , '' , 'PUT');
 		return @json_decode($this->getResponseBody() , true);
 	}
-	// }}}	
-}
+	// }}}
+	}
 ?>
