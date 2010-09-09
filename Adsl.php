@@ -104,7 +104,7 @@ class Adsl extends Kinghost
 	*/	
 	public function getUltimasConexoes( $idAdsl )
 	{
-		$this->doCall( 'adsl/getUltimasConexoes/'.$idAdsl , '' , 'GET');
+		$this->doCall( 'adsl/ultimasConexoes/'.$idAdsl , '' , 'GET');
 		return @json_decode($this->getResponseBody() , true);
 	}
 	// }}}
