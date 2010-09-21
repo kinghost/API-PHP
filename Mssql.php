@@ -152,7 +152,7 @@ class Mssql extends Kinghost
 	{
 		if($idDominio !== false)
 		{
-			$this->doCall( 'mssql/'.$idDominio.'/'.$nomeBanco , '' , 'GET');
+			$this->doCall( 'mssql/dados/'.$idDominio.'/'.$nomeBanco , '' , 'GET');
 			return @json_decode($this->getResponseBody() , true);
 		}
 		return false;
