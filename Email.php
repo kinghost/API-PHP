@@ -34,8 +34,8 @@ class Email extends Kinghost
 	* $email = new Email('meu@email.com' , '123456');
 	* $param = array(
 	* 	'idDominio' 	=> '123',
-	* 	'caixa ' 		=> 'email@dominio.com.br',
-	* 	'senha'			=> '1q2w3eabc'
+	* 	'caixa' 		=> 'email@dominio.com.br',
+	* 	'senha'			=> '1q2w3eabc',
 	* 	'tamanho'		=> '10'
 	* );	
 	* print_r($email->addEmail($param));
@@ -61,8 +61,8 @@ class Email extends Kinghost
 	* $email = new Email('meu@email.com' , '123456');
 	* $param = array(
 	* 	'idDominio' 	=> '123',
-	* 	'caixa ' 		=> 'email@dominio.com.br',
-	* 	'destino'		=> 'email1@dominio.com.br,email2@dominio.com.br,email3@dominio.com.br,email4@dominio.com.br,'
+	* 	'caixa' 		=> 'email@dominio.com.br',
+	* 	'destino'		=> 'email1@dominio.com.br,email2@dominio.com.br,email3@dominio.com.br,email4@dominio.com.br'
 	* );	
 	* print_r($email->addAlias($param));
 	* </code>
@@ -87,7 +87,7 @@ class Email extends Kinghost
 	* $email = new Email('meu@email.com' , '123456');
 	* $param = array(
 	* 	'idDominio' 	=> '123',
-	* 	'destino'		=> 'email1@dominio.com.br,email2@dominio.com.br,email3@dominio.com.br,email4@dominio.com.br'
+	* 	'destino'		=> 'email1@dominio.com.br'
 	* );	
 	* print_r($email->addPegaTudo($param));
 	* </code>
@@ -112,8 +112,8 @@ class Email extends Kinghost
 	* $email = new Email('meu@email.com' , '123456');
 	* $param = array(
 	* 	'idDominio' 	=> '123',
-	* 	'destino'		=> 'email@dominio.com.br'
-	* 	'assunto'		=> 'Auto-Resposta'
+	* 	'destino'		=> 'email@dominio.com.br',
+	* 	'assunto'		=> 'Auto-Resposta',
 	* 	'corpo'			=> 'Essa é uma auto-resposta'
 	* );	
 	* print_r($email->addAutoResposta($param));
@@ -139,7 +139,7 @@ class Email extends Kinghost
 	* $email = new Email('meu@email.com' , '123456');
 	* $param = array(
 	* 	'idDominio' 	=> '123',
-	* 	'caixa'			=> 'email@dominio.com.br'
+	* 	'caixa'			=> 'email@dominio.com.br',
 	* 	'destino'		=> 'email1@dominio.com.br,email2@dominio.com.br,email3@dominio.com.br,email4@dominio.com.br'
 	* );	
 	* print_r($email->addMulti($param));
@@ -166,7 +166,7 @@ class Email extends Kinghost
 	* $email = new Email('meu@email.com' , '123456');
 	* $param = array(
 	* 	'idDominio' 	=> '123',
-	* 	'caixa'			=> 'email@dominio.com.br'
+	* 	'caixa'			=> 'email@dominio.com.br',
 	* 	'destino'		=> 'email1@dominio.com.br,email2@dominio.com.br,email3@dominio.com.br,email4@dominio.com.br'
 	* );	
 	* print_r($email->editRedir($param));
@@ -192,7 +192,7 @@ class Email extends Kinghost
 	* $email = new Email('meu@email.com' , '123456');
 	* $param = array(
 	* 	'idDominio' 	=> '123',
-	* 	'caixa'			=> 'email@dominio.com.br'
+	* 	'caixa'			=> 'email@dominio.com.br',
 	* 	'senha'			=> '1qaz2wer43'
 	* );	
 	* print_r($email->editSenha($param));
@@ -219,7 +219,7 @@ class Email extends Kinghost
 	* $email = new Email('meu@email.com' , '123456');
 	* $param = array(
 	* 	'idDominio' 	=> '123',
-	* 	'caixa'			=> 'email@dominio.com.br'
+	* 	'caixa'			=> 'email@dominio.com.br',
 	* 	'tamanho'		=> '15'
 	* );	
 	* print_r($email->editTamanho($param));
@@ -294,7 +294,7 @@ class Email extends Kinghost
 	* $email = new Email('meu@email.com' , '123456');
 	* $param = array(
 	* 	'idDominio' 	=> '123',
-	* 	'caixa'			=> 'email@dominio.com.br'
+	* 	'caixa'			=> 'email@dominio.com.br',
 	* 	'destino'		=> 'email1@dominio.com.br,email2@dominio.com.br,email3@dominio.com.br,email4@dominio.com.br'	
 	* );	
 	* print_r($email->edutMulti($param));
