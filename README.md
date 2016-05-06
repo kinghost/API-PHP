@@ -23,5 +23,18 @@ $r = $kinghost->addMulti($param);
 var_dump($r);
 ```
 
+## Composer.
+O projeto possui suporte ao [composer](https://getcomposer.org/), porém é necessário adicionar o projeto manualmente no composer.json.
+
+```
+"repositories": [{
+    "type": "git",
+    "url": "https://github.com/kinghost/API-PHP"
+}],
+"require": {
+    "kinghost/api-php": "dev-master"
+}
+```
+
 ## Issues e suporte.
 De modo garantir um suporte padronizado, reporte de bugs e/ou sugestões podem ser enviadas diretamente para o email [suporte@kinghost.com.br](mailto:suporte@kinghost.com.br) ou, se já for cliente, abra um chamado através do [painel de controle](https://painel.kinghost.com.br)  na categoria "Programação PHP"
