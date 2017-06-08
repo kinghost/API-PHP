@@ -113,8 +113,6 @@ class Cliente extends Kinghost
     public function autenticaCliente($param)
     {
         $this->doCall('cliente/autentica', $param, 'PUT');
-        //echo $this->getVerb() . PHP_EOL;
-
         return @json_decode($this->getResponseBody(), true);
     }
     // }}}
