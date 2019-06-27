@@ -304,7 +304,7 @@ class Email extends Kinghost
      * @access public
      * @return object
      */
-    public function edutMulti($param)
+    public function editMulti($param)
     {
         $this->doCall('email/editmulti', $param, 'PUT');
         return @json_decode($this->getResponseBody(), true);
